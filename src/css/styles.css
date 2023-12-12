@@ -1,0 +1,689 @@
+/* ============================================= */
+/*                CSS variables                  */
+/* ============================================= */
+:root {
+  /*    Hamburger variables    */
+  --bar-width: 35px;
+  --bar-height: 3px;
+  --hamburger-gap: 6px;
+  --hamburger-menu-background: #6ea3de;
+  --hamburger-margin: 6px;
+  --animation-timing: 200ms ease-in-out;
+  --animation-timing-sidebar: 400ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --hamburger-font-color: #083973;
+
+  /*    Site variables    */
+  --foreground: #333;
+  --background: white;
+  --main-font: "Sora", "Aileron SemiBold", "Manrope", sans-serif;
+  --main-title-color: rgba(1, 30, 212, 1);
+  --nav-font-color: #68a0dd;
+}
+
+/* ============================================= */
+/*               General Elements                */
+/* ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================= */
+/*                Hamburger menu                 */
+/* ============================================= */
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  position: absolute;
+  right: var(--hamburger-margin);
+  top: var(--hamburger-margin);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  z-index: 1000;
+  gap: var(--hamburger-gap);
+  background-color: var(--hamburger-menu-background);
+  width: 3rem;
+  height: 3rem;
+  padding: 13px 0px 10px 0px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 5px calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 5px calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.hamburger-nav li {
+  height: 10px;
+}
+
+.hamburger-nav a {
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.hamburger-nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  margin-top: 0rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 400;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding-left: 0;
+  transition: translate var(--animation-timing-sidebar);
+  translate: 100%;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+.sidebar ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar li a {
+  font-size: 30px;
+  color: var(--hamburger-font-color);
+  width: auto;
+}
+
+.sidebar li {
+  padding-bottom: 6rem;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+/* ============================================= */
+/*             Navigation and header             */
+/* ============================================= */
+
+header {
+  height: 60px;
+  width: 100vw;
+  font-family: var(--main-font);
+}
+
+.flags {
+  display: none;
+}
+
+.large-nav {
+  display: none;
+}
+
+.logo-box {
+  padding-left: 5px;
+  width: fit-content;
+}
+
+/* ============================================= */
+/*        Jumbotron main image and title         */
+/* ============================================= */
+
+.jumbotron {
+  padding-bottom: 2rem;
+}
+
+.hero-box {
+  background: black;
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/pexels-anthony-derosa-216216_compressed.jpg);
+}
+
+.image-overlay {
+  width: 100vw;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.motto-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 79px;
+  left: 152px;
+  top: 301px;
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--main-font);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+}
+
+.motto {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#photo-credit {
+  padding-left: 4px;
+  font-size: 10px;
+}
+
+h1 {
+  font-family: var(--main-font);
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-title-color);
+  padding-bottom: 1rem;
+}
+
+/* ============================================= */
+/*                Sections Styling               */
+/* ============================================= */
+
+#our-services,
+#english-sign-check,
+#todd-lowrey,
+#contact-form {
+  margin: 30rem, 0rem, 20rem, 0rem;
+}
+
+.sections h2 {
+  font-family: (--main-font);
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--main-title-color);
+  padding-left: 1rem;
+}
+
+.section-card {
+  background-color: rgba(241, 241, 241, 1);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-card h3 {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.section-card p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.image-container {
+  text-align: center;
+  z-index: 100;
+}
+
+#todd-lowrey .section-card {
+  margin-top: -5rem;
+  padding-top: 5rem;
+  z-index: -10;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================= */
+/*               Japanese Language               */
+/* ============================================= */
+.japanese {
+  line-height: 1.5rem;
+}
+
+/* ============================================= */
+/*                 Contact Form                  */
+/* ============================================= */
+
+#contact-form {
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+input[type="submit"] {
+  background-color: var(--main-title-color);
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.row {
+  margin-top: 0.5rem;
+}
+
+.row label {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+input[type="text"],
+#subject,
+textarea {
+  text-align: left;
+  background-color: var(--hamburger-menu-background);
+  margin: auto 0;
+  color: black;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+}
+
+input[type="text"],
+#subject {
+  height: 25px;
+}
+
+#subject {
+  color: black;
+  font-weight: 500;
+}
+
+textarea {
+  padding: 5px 5px;
+  text-align: left;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: var(--main-title-color);
+}
+
+.required-field {
+  color: red;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+.error_message {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  color: red;
+}
+
+/* ============================================= */
+/**             Styling components              **/
+/* ============================================= */
+
+hr {
+  width: 80%;
+  color: black;
+  height: 2px;
+  background-color: black;
+}
+
+footer {
+  height: 3rem;
+  background-color: var(--nav-font-color);
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+/* ============================================== */
+/* Media Query for low resolution  Tablets, Ipads */
+/* ============================================== */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /*body {
+    background-color: yellow;
+  }*/
+
+  /* ============================================= */
+  /*                Hamburger menu                 */
+  /* ============================================= */
+
+  .sidebar {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 30vw;
+    z-index: 400;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .sidebar li a {
+    font-size: 20px;
+  }
+}
+
+/* ============================================= */
+/*  Media Query for Tablets Ipads portrait mode  */
+/* ============================================= */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /*body {
+    background-color: blue;
+  }*/
+
+  /* ============================================= */
+  /*                Hamburger menu                 */
+  /* ============================================= */
+
+  .sidebar {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 30vw;
+    z-index: 400;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .sidebar li a {
+    font-size: 20px;
+  }
+
+  /* ============================================= */
+  /*                Section Styling                */
+  /* ============================================= */
+  .motto-box {
+    top: 30%;
+    left: 50%;
+  }
+
+  .motto {
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 0;
+  }
+
+  h2 {
+    margin-left: 1.5rem;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+  .flex-container .section-card {
+    width: 40%;
+  }
+
+  #our-business .section-card {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+  #english-sign-check {
+    justify-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  #english-sign-check .section-card {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+  #todd-lowrey {
+    justify-items: center;
+  }
+
+  #todd-lowrey .section-card {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+  #todd-lowrey .section-card {
+    margin-top: -4rem;
+    padding-top: 3rem;
+    z-index: -10;
+  }
+  .form-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-description {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+}
+
+/* ============================================= */
+/*      Media Query for Laptops and Desktops     */
+/* ============================================= */
+
+@media only screen and (min-width: 1025px) {
+  /*body {
+    background-color: green;
+  }*/
+
+  /* ============================================= */
+  /*                Hamburger menu                 */
+  /* ============================================= */
+  .hamburger-nav {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*             Navigation and header             */
+  /* ============================================= */
+  header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .flags {
+    display: block;
+    margin-right: 1rem;
+    padding-top: 10px;
+  }
+
+  .large-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--nav-font-color);
+    font-family: var(--main-font);
+  }
+
+  nav li {
+    margin: 0 2rem;
+    font-size: 15px;
+  }
+
+  .language-selector {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  #jpn-flag img {
+    width: 35px;
+    height: 25px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 5px #ccc;
+  }
+
+  #can-flag img {
+    width: 35px;
+    height: 25px;
+    box-shadow: 5px 5px 5px #ccc;
+  }
+
+  .motto-box {
+    top: 30%;
+    left: 50%;
+  }
+
+  .motto {
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 0;
+  }
+
+  /* ============================================= */
+  /*              Section Styling                  */
+  /* ============================================= */
+
+  .main-divider {
+    width: 70%;
+  }
+
+  .form-description {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  #our-services,
+  #our-business {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #english-sign-check {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  #todd-lowrey {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* ============================================= */
+/*         Media Query for Large screens         */
+/* ============================================= */
+
+@media (min-width: 1281px) {
+  /*body {
+    background-color: white;
+  }*/
+
+  /* ============================================= */
+  /*                Hamburger menu                 */
+  /* ============================================= */
+  .hamburger-nav {
+    display: none;
+  }
+
+  /* ============================================= */
+  /*             Navigation and header             */
+  /* ============================================= */
+  .large-nav {
+    display: flex;
+  }
+
+  nav li {
+    margin: 0 3rem;
+    font-size: 18px;
+  }
+}
