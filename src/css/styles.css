@@ -250,14 +250,6 @@ h1 {
 /* ============================================= */
 /*                Sections Styling               */
 /* ============================================= */
-/*
-#our-services,
-#english-sign-check,
-#todd-lowrey,
-#contact-form {
-  margin: 30rem, 0rem, 20rem, 0rem;
-}
-*/
 
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
@@ -515,13 +507,13 @@ footer {
     margin-bottom: 3rem;
   }
 
-  #english-sign-check {
+  #english-proofreading {
     justify-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
 
-  #english-sign-check .section-card {
+  #english-proofreading .section-card {
     width: 80%;
     margin: auto;
     margin-bottom: 3rem;
@@ -655,7 +647,7 @@ footer {
     margin: 0 auto;
   }
 
-  #english-sign-check {
+  #english-proofreading {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
