@@ -281,6 +281,8 @@ h1 {
 .section-card p {
   padding-left: 2rem;
   padding-right: 2rem;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .profile-img {
@@ -317,6 +319,10 @@ footer {
 
 #contact-form {
   padding: 0rem 2rem 2rem 2rem;
+}
+
+.form-description {
+  line-height: 25px;
 }
 
 input[type="submit"] {

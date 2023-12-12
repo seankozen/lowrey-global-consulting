@@ -595,19 +595,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`
 });
 headerObserver.observe(jumbotron);
-// const section1 = document.querySelector("#our-business");
-// console.log(section1);
-// const obsCallBack = (entries, observer) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//   });
-// };
-// const obsOptions = {
-//   root: null,
-//   threshold: [0, 0.2],
-// };
-// const observer = new IntersectionObserver(obsCallBack, obsOptions);
-// observer.observe(section1);
 /***************************************/ /*****       Form Validation       *****/ /***************************************/ const nameValidation = document.getElementById("name_validation");
 const submitterName = document.getElementById("name");
 const submitterEmail = document.getElementById("email");
