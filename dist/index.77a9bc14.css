@@ -155,7 +155,7 @@ header {
 .logo-box {
   width: -moz-fit-content;
   width: fit-content;
-  padding-left: 5px;
+  margin-left: 5px;
 }
 
 .jumbotron {

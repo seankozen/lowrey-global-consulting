@@ -177,7 +177,8 @@ header {
 }
 
 .logo-box {
-  padding-left: 5px;
+  margin-left: 5px;
+  /*padding-left: 5px;*/
   width: fit-content;
 }
 
