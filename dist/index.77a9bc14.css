@@ -142,6 +142,11 @@ body {
   width: 100%;
 }
 
+.sticky {
+  background-color: #fffffff2;
+  position: fixed;
+}
+
 header {
   font-family: var(--main-font);
   width: 100vw;

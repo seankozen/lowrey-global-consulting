@@ -12,6 +12,45 @@ const translateMenu = () => {
 menuDiv.addEventListener("click", translateMenu);
 
 /***************************************/
+/*****     Sticky Navigation       *****/
+/***************************************/
+const jumbotron = document.querySelector(".jumbotron");
+const header = document.querySelector(".header");
+const navHeight = header.getBoundingClientRect().height;
+
+const stickyNav = (entries) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) header.classList.add("sticky");
+  else header.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0.1,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(jumbotron);
+
+// const section1 = document.querySelector("#our-business");
+// console.log(section1);
+
+// const obsCallBack = (entries, observer) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// const observer = new IntersectionObserver(obsCallBack, obsOptions);
+// observer.observe(section1);
+
+/***************************************/
 /*****       Form Validation       *****/
 /***************************************/
 
