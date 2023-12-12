@@ -359,7 +359,7 @@ footer {
   }
 }
 
-@media only screen and (width >= 768px) and (width <= 1024px) {
+@media only screen and (width >= 768px) {
   .sidebar {
     z-index: 400;
     -webkit-backdrop-filter: blur(10px);
