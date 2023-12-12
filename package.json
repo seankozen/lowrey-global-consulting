@@ -104,8 +104,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist",
-    "deploy": "gh-pages -d dist"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Sean Kozen",
   "license": "ISC"
