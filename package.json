@@ -5,7 +5,7 @@
   "name": "lowrey-global-consulting",
   "version": "1.0.1",
   "description": "Company website",
-  "main": "index.js",
+  "default": "index.js",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-styles": "^4.3.0",
@@ -104,7 +104,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
     "deploy": "gh-pages -d dist"
   },
   "author": "Sean Kozen",
