@@ -250,12 +250,18 @@ h1 {
 /* ============================================= */
 /*                Sections Styling               */
 /* ============================================= */
-
+/*
 #our-services,
 #english-sign-check,
 #todd-lowrey,
 #contact-form {
   margin: 30rem, 0rem, 20rem, 0rem;
+}
+*/
+
+.sections {
+  margin: 30rem, 0rem, 20rem, 0rem;
+  transition: transform 1s, opacity 1s;
 }
 
 .sections h2 {
@@ -304,6 +310,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ============================================= */
+/*                Webpage effects                */
+/* ============================================= */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /* ============================================= */
@@ -413,10 +427,6 @@ footer {
 /* ============================================== */
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-  /*body {
-    background-color: yellow;
-  }*/
-
   /* ============================================= */
   /*                Hamburger menu                 */
   /* ============================================= */
@@ -447,10 +457,6 @@ footer {
 /* ============================================= */
 
 @media only screen and (min-width: 768px) {
-  /*body {
-    background-color: blue;
-  }*/
-
   /* ============================================= */
   /*                Hamburger menu                 */
   /* ============================================= */
@@ -551,10 +557,6 @@ footer {
 /* ============================================= */
 
 @media only screen and (min-width: 1025px) {
-  /*body {
-    background-color: green;
-  }*/
-
   /* ============================================= */
   /*                Hamburger menu                 */
   /* ============================================= */
@@ -675,10 +677,6 @@ footer {
 /* ============================================= */
 
 @media (min-width: 1281px) {
-  /*body {
-    background-color: white;
-  }*/
-
   /* ============================================= */
   /*                Hamburger menu                 */
   /* ============================================= */

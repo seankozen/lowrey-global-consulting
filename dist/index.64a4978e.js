@@ -577,13 +577,20 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"goJYj":[function(require,module,exports) {
 const menuDiv = document.querySelector(".sidebar");
 const checkBox = document.getElementById("menu-checkbox");
+const jumbotron = document.querySelector(".jumbotron");
+const header = document.querySelector(".header");
+const allPageSections = document.querySelectorAll(".sections");
+/*****     For form validation     *****/ const nameValidation = document.getElementById("name_validation");
+const submitterName = document.getElementById("name");
+const submitterEmail = document.getElementById("email");
+const emailValidation = document.getElementById("email_validation");
+const submitterMessage = document.getElementById("message");
+const messageValidation = document.getElementById("message_validation");
 /***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ const translateMenu = ()=>{
     checkBox.checked = false;
 };
 menuDiv.addEventListener("click", translateMenu);
-/***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const jumbotron = document.querySelector(".jumbotron");
-const header = document.querySelector(".header");
-const navHeight = header.getBoundingClientRect().height;
+/***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const navHeight = header.getBoundingClientRect().height;
 const stickyNav = (entries)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) header.classList.add("sticky");
@@ -595,13 +602,22 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`
 });
 headerObserver.observe(jumbotron);
-/***************************************/ /*****       Form Validation       *****/ /***************************************/ const nameValidation = document.getElementById("name_validation");
-const submitterName = document.getElementById("name");
-const submitterEmail = document.getElementById("email");
-const emailValidation = document.getElementById("email_validation");
-const submitterMessage = document.getElementById("message");
-const messageValidation = document.getElementById("message_validation");
-const checkName = (e)=>{
+/***************************************/ /*****  Reveal Section on Scroll   *****/ /***************************************/ const revealSection = (entries, observer)=>{
+    const [entry] = entries;
+    console.log(entry);
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove("section-hidden");
+    observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15
+});
+allPageSections.forEach((section)=>{
+    sectionObserver.observe(section);
+    section.classList.add("section-hidden");
+});
+/***************************************/ /*****       Form Validation       *****/ /***************************************/ const checkName = (e)=>{
     let submitterName = e.target.value;
     if (submitterName == null || submitterName.length < 4) nameValidation.innerText = "Please enter a valid name.";
     else nameValidation.innerText = "";

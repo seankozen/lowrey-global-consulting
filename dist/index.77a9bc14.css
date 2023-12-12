@@ -215,8 +215,9 @@ h1 {
   font-weight: bold;
 }
 
-#our-services, #english-sign-check, #todd-lowrey, #contact-form {
+.sections {
   margin: 30rem, 0rem, 20rem, 0rem;
+  transition: transform 1s, opacity 1s;
 }
 
 .sections h2 {
@@ -265,6 +266,11 @@ footer {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .japanese {
