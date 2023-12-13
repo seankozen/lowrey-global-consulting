@@ -1,3 +1,10 @@
+@font-face {
+  font-family: Aileron-SemiBold;
+  src: url("Aileron-SemiBold.ttf.da124a74.woff") format("woff"), url("Aileron-SemiBold.ttf.01651233.svg#Aileron-SemiBold") format("svg"), url("Aileron-SemiBold.ttf.a8555eca.eot"), url("Aileron-SemiBold.ttf.a8555eca.eot#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bar-width: 35px;
   --bar-height: 3px;
@@ -12,7 +19,7 @@
   --sticky-nav-bg-color: #fffffff2;
   --foreground: #333;
   --background: white;
-  --main-font: "Sora", "Aileron SemiBold", "Manrope", sans-serif;
+  --main-font: "Aileron SemiBold", "Aileron-SemiBold", "Manrope", sans-serif;
   --main-title-color: #011ed4;
   --nav-font-color: #68a0dd;
   --card-text-font-size: 16px;

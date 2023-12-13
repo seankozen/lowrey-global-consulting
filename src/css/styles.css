@@ -1,4 +1,17 @@
 /* ============================================= */
+/*                    Fonts                      */
+/* ============================================= */
+@font-face {
+  font-family: "Aileron-SemiBold";
+  src: url("fonts/Aileron-SemiBold.ttf.woff") format("woff"),
+    url("fonts/Aileron-SemiBold.ttf.svg#Aileron-SemiBold") format("svg"),
+    url("fonts/Aileron-SemiBold.ttf.eot"),
+    url("fonts/Aileron-SemiBold.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================================= */
 /*                CSS variables                  */
 /* ============================================= */
 :root {
@@ -20,7 +33,7 @@
   /*    Page variables    */
   --foreground: #333;
   --background: white;
-  --main-font: "Sora", "Aileron SemiBold", "Manrope", sans-serif;
+  --main-font: "Aileron SemiBold", "Aileron-SemiBold", "Manrope", sans-serif;
   --main-title-color: rgba(1, 30, 212, 1);
   --nav-font-color: #68a0dd;
   --card-text-font-size: 16px;
