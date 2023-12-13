@@ -49,7 +49,6 @@ headerObserver.observe(jumbotron);
 
 const revealSection = (entries, observer) => {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
 

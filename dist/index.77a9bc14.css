@@ -8,11 +8,15 @@
   --animation-timing-sidebar: .4s ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   --hamburger-font-color: #083973;
+  --sidebar-background-color: #fff3;
+  --sticky-nav-bg-color: #fffffff2;
   --foreground: #333;
   --background: white;
   --main-font: "Sora", "Aileron SemiBold", "Manrope", sans-serif;
   --main-title-color: #011ed4;
   --nav-font-color: #68a0dd;
+  --card-text-font-size: 16px;
+  --invalid-color: red;
 }
 
 * {
@@ -101,11 +105,11 @@ body {
 
 .sidebar {
   z-index: 400;
+  background-color: var(--sidebar-background-color);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   text-align: center;
   transition: translate var(--animation-timing-sidebar);
-  background-color: #fff3;
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
@@ -143,7 +147,7 @@ body {
 }
 
 .sticky {
-  background-color: #fffffff2;
+  background-color: var(--sticky-nav-bg-color);
   position: fixed;
 }
 
@@ -241,9 +245,9 @@ h1 {
 }
 
 .section-card p {
+  font-size: var(--card-text-font-size);
   padding-left: 2rem;
   padding-right: 2rem;
-  font-size: 16px;
   line-height: 25px;
 }
 
@@ -330,13 +334,13 @@ input:focus, textarea:focus {
 }
 
 .required-field {
-  color: red;
+  color: var(--invalid-color);
   padding-left: .5rem;
   font-size: .8rem;
 }
 
 .error_message {
-  color: red;
+  color: var(--invalid-color);
   margin-bottom: 10px;
   margin-left: 10px;
   font-size: .8rem;
@@ -357,9 +361,9 @@ footer {
 @media only screen and (width >= 481px) and (width <= 767px) {
   .sidebar {
     z-index: 400;
+    background-color: var(--sidebar-background-color);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: #fff3;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -380,9 +384,9 @@ footer {
 @media only screen and (width >= 768px) {
   .sidebar {
     z-index: 400;
+    background-color: var(--sidebar-background-color);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: #fff3;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

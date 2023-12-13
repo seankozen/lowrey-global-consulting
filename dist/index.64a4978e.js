@@ -604,7 +604,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(jumbotron);
 /***************************************/ /*****  Reveal Section on Scroll   *****/ /***************************************/ const revealSection = (entries, observer)=>{
     const [entry] = entries;
-    console.log(entry);
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section-hidden");
     observer.unobserve(entry.target);

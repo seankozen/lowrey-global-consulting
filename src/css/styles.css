@@ -12,13 +12,21 @@
   --animation-timing-sidebar: 400ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
   --hamburger-font-color: #083973;
+  --sidebar-background-color: rgba(255, 255, 255, 0.2);
 
-  /*    Site variables    */
+  /*   Header variables    */
+  --sticky-nav-bg-color: rgba(255, 255, 255, 0.95);
+
+  /*    Page variables    */
   --foreground: #333;
   --background: white;
   --main-font: "Sora", "Aileron SemiBold", "Manrope", sans-serif;
   --main-title-color: rgba(1, 30, 212, 1);
   --nav-font-color: #68a0dd;
+  --card-text-font-size: 16px;
+
+  /*    Validation variables    */
+  --invalid-color: red;
 }
 
 /* ============================================= */
@@ -124,7 +132,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   z-index: 400;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--sidebar-background-color);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -160,7 +168,7 @@ body {
 
 .sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--sticky-nav-bg-color);
 }
 
 /* ============================================= */
@@ -279,7 +287,7 @@ h1 {
 .section-card p {
   padding-left: 2rem;
   padding-right: 2rem;
-  font-size: 16px;
+  font-size: var(--card-text-font-size);
   line-height: 25px;
 }
 
@@ -383,7 +391,7 @@ textarea:focus {
 }
 
 .required-field {
-  color: red;
+  color: var(--invalid-color);
   font-size: 0.8rem;
   padding-left: 0.5rem;
 }
@@ -392,7 +400,7 @@ textarea:focus {
   margin-left: 10px;
   margin-bottom: 10px;
   font-size: 0.8rem;
-  color: red;
+  color: var(--invalid-color);
 }
 
 /* ============================================= */
@@ -432,7 +440,7 @@ footer {
     height: 100vh;
     max-width: 30vw;
     z-index: 400;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--sidebar-background-color);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -462,7 +470,7 @@ footer {
     height: 100vh;
     max-width: 30vw;
     z-index: 400;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--sidebar-background-color);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
