@@ -120,7 +120,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
   margin-top: 0;
   padding-left: 0;
   display: flex;

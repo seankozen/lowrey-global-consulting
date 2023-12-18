@@ -142,7 +142,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  max-height: 100vh;
+  height: 100vh;
   width: 100vw;
   z-index: 400;
   background-color: var(--sidebar-background-color);
