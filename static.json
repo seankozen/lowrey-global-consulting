@@ -1,7 +1,8 @@
 {
   "root": "dist/",
   "routes": {
-    "**": "index.html"
+    "**": "index.html",
+    "/route/**": "index.jp.html"
   },
   "https_only": true,
   "error_page": "index.html",
