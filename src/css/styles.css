@@ -416,6 +416,13 @@ textarea:focus {
   color: var(--invalid-color);
 }
 
+#submit_button,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
 /* ============================================= */
 /**             Styling components              **/
 /* ============================================= */

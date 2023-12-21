@@ -353,6 +353,10 @@ input:focus, textarea:focus {
   font-size: .8rem;
 }
 
+#submit_button, input, textarea, select {
+  cursor: pointer;
+}
+
 hr {
   color: #000;
   background-color: #000;
