@@ -424,6 +424,13 @@ select {
   cursor: pointer;
 }
 
+.button-box,
+.japanese-button-box {
+  display: flex;
+  width: 19rem;
+  justify-content: right;
+}
+
 #japanese_submit_button {
   background-color: var(--main-title-color);
   color: #ffffff;

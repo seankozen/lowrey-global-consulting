@@ -358,6 +358,12 @@ input:focus, textarea:focus {
   cursor: pointer;
 }
 
+.button-box, .japanese-button-box {
+  justify-content: right;
+  width: 19rem;
+  display: flex;
+}
+
 #japanese_submit_button {
   background-color: var(--main-title-color);
   color: #fff;
