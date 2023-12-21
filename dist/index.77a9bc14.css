@@ -258,6 +258,25 @@ h1 {
   line-height: 25px;
 }
 
+.picture-container {
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  display: flex;
+}
+
+.example-pic {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
+
+.example-pic img {
+  max-width: 100%;
+  margin-left: auto;
+}
+
 .profile-img {
   border-radius: 50%;
 }
@@ -458,6 +477,7 @@ footer {
   }
 
   .motto {
+    opacity: .99;
     margin-left: 0;
     font-size: 40px;
     font-weight: 900;
@@ -491,6 +511,24 @@ footer {
   #english-proofreading .section-card {
     width: 80%;
     margin: auto auto 3rem;
+  }
+
+  .picture-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    display: flex;
+  }
+
+  .example-pic {
+    max-width: 80%;
+    margin-bottom: 0;
+  }
+
+  .example-pic img {
+    object-fit: contain;
   }
 
   #todd-lowrey {
@@ -610,6 +648,22 @@ footer {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .picture-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+  }
+
+  .example-pic {
+    max-width: 80%;
+    margin-bottom: 0;
+  }
+
+  .example-pic img {
+    object-fit: contain;
   }
 
   #todd-lowrey {

@@ -304,6 +304,24 @@ h1 {
   line-height: 25px;
 }
 
+.picture-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.example-pic {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.example-pic img {
+  max-width: 100%;
+  margin-left: auto;
+}
+
 .profile-img {
   border-radius: 50%;
 }
@@ -555,6 +573,7 @@ footer {
   .motto {
     font-size: 40px;
     font-weight: 900;
+    opacity: 0.99;
     margin-left: 0;
   }
 
@@ -587,6 +606,24 @@ footer {
     width: 80%;
     margin: auto;
     margin-bottom: 3rem;
+  }
+
+  .picture-container {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+
+  .example-pic {
+    margin-bottom: 0;
+    max-width: 80%;
+  }
+
+  .example-pic img {
+    object-fit: contain;
   }
 
   #todd-lowrey {
@@ -731,6 +768,22 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+  }
+
+  .picture-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .example-pic {
+    margin-bottom: 0;
+    max-width: 80%;
+  }
+
+  .example-pic img {
+    object-fit: contain;
   }
 
   #todd-lowrey {
