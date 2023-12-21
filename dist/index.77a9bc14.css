@@ -311,6 +311,10 @@ footer {
   padding: 0 2rem 2rem;
 }
 
+.form-description-container {
+  text-align: justify;
+}
+
 .form-description {
   line-height: 25px;
 }
