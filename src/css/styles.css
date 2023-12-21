@@ -825,4 +825,12 @@ footer {
     margin: 0 3rem;
     font-size: 18px;
   }
+
+  /* ============================================= */
+  /*                     Form                      */
+  /* ============================================= */
+
+  .form-description-container {
+    text-align: center;
+  }
 }

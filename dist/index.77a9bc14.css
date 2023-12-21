@@ -696,6 +696,10 @@ footer {
     margin: 0 3rem;
     font-size: 18px;
   }
+
+  .form-description-container {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=index.77a9bc14.css.map */
