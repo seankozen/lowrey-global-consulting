@@ -382,6 +382,7 @@ textarea {
   margin-top: 10px;
   margin-bottom: 5px;
   border: none;
+  width: 80%;
 }
 
 input[type="text"],
@@ -429,6 +430,7 @@ select {
   display: flex;
   width: 19rem;
   justify-content: right;
+  width: 80%;
 }
 
 #japanese_submit_button {
@@ -492,6 +494,20 @@ footer {
 
   .sidebar li {
     padding-bottom: 5rem;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 50%;
+  }
+
+  #subject {
+    width: 30%;
+  }
+
+  .button-box,
+  .japanese-button-box {
+    width: 50%;
   }
 }
 
@@ -596,6 +612,16 @@ footer {
   .form-description {
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+  }
+
+  .button-box,
+  .japanese-button-box {
+    width: 100%;
   }
 }
 

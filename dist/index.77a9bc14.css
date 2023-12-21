@@ -320,6 +320,7 @@ input[type="text"], #subject, textarea {
   background-color: var(--hamburger-menu-background);
   color: #000;
   border: none;
+  width: 80%;
   margin: 10px 0 5px 10px;
 }
 
@@ -360,7 +361,7 @@ input:focus, textarea:focus {
 
 .button-box, .japanese-button-box {
   justify-content: right;
-  width: 19rem;
+  width: 80%;
   display: flex;
 }
 
@@ -410,6 +411,18 @@ footer {
 
   .sidebar li {
     padding-bottom: 5rem;
+  }
+
+  input[type="text"], textarea {
+    width: 50%;
+  }
+
+  #subject {
+    width: 30%;
+  }
+
+  .button-box, .japanese-button-box {
+    width: 50%;
   }
 }
 
@@ -499,6 +512,10 @@ footer {
   .form-description {
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+  }
+
+  input[type="text"], textarea, .button-box, .japanese-button-box {
+    width: 100%;
   }
 }
 
