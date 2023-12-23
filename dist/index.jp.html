@@ -171,7 +171,8 @@
           checked. We will get back to you as soon as we can. 
         </p>
         <div class="form-card">
-          <form id="contact_form" action="https://formsubmit.co/087bbefde57232e464e0c5fc9960ce1f" method="POST">
+          <form id="contact_form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="apikey" value="99be8dde-6758-4bb2-8754-4798fdc3e3c5">
             <div class="row">
               <label class="required" for="name">お名前:</label>
               <span class="required-field">*必須</span><br>
@@ -196,6 +197,7 @@
               <textarea id="message" class="input" name="message" rows="10" cols="35"></textarea><br>
               <span id="message_validation" class="error_message"></span>
             </div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
             <div class="japanese-button-box">
               <button id="japanese_submit_button" type="submit">送信</button>
             </div>   
