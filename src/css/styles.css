@@ -235,6 +235,20 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--main-font);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+}
+
+/*
+.motto-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 86px;
   height: 79px;
   left: 152px;
@@ -247,6 +261,8 @@ header {
   z-index: 200;
   transform: translate(-50%, -50%);
 }
+
+*/
 
 .motto {
   font-size: 20px;
@@ -571,7 +587,7 @@ footer {
   /* ============================================= */
   .motto-box {
     top: 30%;
-    left: 50%;
+    left: 49%;
   }
 
   .motto {
@@ -740,7 +756,7 @@ footer {
 
   .motto-box {
     top: 30%;
-    left: 50%;
+    left: 49%;
   }
 
   .motto {

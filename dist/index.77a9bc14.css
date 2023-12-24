@@ -197,8 +197,6 @@ header {
   z-index: 200;
   justify-content: center;
   align-items: center;
-  width: 86px;
-  height: 79px;
   display: flex;
   position: absolute;
   top: 40%;
@@ -477,7 +475,7 @@ footer {
 
   .motto-box {
     top: 30%;
-    left: 50%;
+    left: 49%;
   }
 
   .motto {
@@ -625,7 +623,7 @@ footer {
 
   .motto-box {
     top: 30%;
-    left: 50%;
+    left: 49%;
   }
 
   .motto {
