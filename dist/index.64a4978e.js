@@ -587,6 +587,10 @@ const submitterEmail = document.getElementById("email");
 const emailValidation = document.getElementById("email_validation");
 const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
+/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ const translateMenu = ()=>{
+    checkBox.checked = false;
+};
+menuDiv.addEventListener("click", translateMenu);
 /***************************************/ /*****    Motto display or hide    *****/ /***************************************/ checkBox.addEventListener("change", ()=>{
     let viewingScreen = screen.width;
     if (viewingScreen < 481) {

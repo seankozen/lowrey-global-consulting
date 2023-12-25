@@ -15,6 +15,16 @@ const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
 
 /***************************************/
+/*****   Hamburger display or hide *****/
+/***************************************/
+
+const translateMenu = () => {
+  checkBox.checked = false;
+};
+
+menuDiv.addEventListener("click", translateMenu);
+
+/***************************************/
 /*****    Motto display or hide    *****/
 /***************************************/
 checkBox.addEventListener("change", () => {
