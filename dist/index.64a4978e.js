@@ -587,7 +587,7 @@ const submitterEmail = document.getElementById("email");
 const emailValidation = document.getElementById("email_validation");
 const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
-/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ const translateMenu = ()=>{
+/*********************************************************/ /*****  Hamburger display or hide after menu click   *****/ /*********************************************************/ const translateMenu = ()=>{
     checkBox.checked = false;
 };
 menuDiv.addEventListener("click", translateMenu);
