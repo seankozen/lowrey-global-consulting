@@ -20,6 +20,10 @@ const messageValidation = document.getElementById("message_validation");
 
 const translateMenu = () => {
   checkBox.checked = false;
+  let viewingScreen = screen.width;
+  if (viewingScreen < 481) {
+    motto.classList.remove("hidden");
+  }
 };
 
 menuDiv.addEventListener("click", translateMenu);

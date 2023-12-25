@@ -589,6 +589,8 @@ const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
 /*********************************************************/ /*****  Hamburger display or hide after menu click   *****/ /*********************************************************/ const translateMenu = ()=>{
     checkBox.checked = false;
+    let viewingScreen = screen.width;
+    if (viewingScreen < 481) motto.classList.remove("hidden");
 };
 menuDiv.addEventListener("click", translateMenu);
 /***************************************/ /*****    Motto display or hide    *****/ /***************************************/ checkBox.addEventListener("change", ()=>{
