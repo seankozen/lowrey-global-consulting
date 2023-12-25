@@ -2,6 +2,7 @@ const menuDiv = document.querySelector(".sidebar");
 const checkBox = document.getElementById("menu-checkbox");
 const jumbotron = document.querySelector(".jumbotron");
 const header = document.querySelector(".header");
+const motto = document.querySelector(".motto-box");
 
 const allPageSections = document.querySelectorAll(".sections");
 
@@ -17,11 +18,24 @@ const messageValidation = document.getElementById("message_validation");
 /*****   Hamburger display or hide *****/
 /***************************************/
 
+/** 
 const translateMenu = () => {
   checkBox.checked = false;
 };
+*/
 
-menuDiv.addEventListener("click", translateMenu);
+checkBox.addEventListener("change", () => {
+  let viewingScreen = screen.width;
+  if (viewingScreen < 481) {
+    if (checkBox.checked) {
+      motto.classList.add("hidden");
+    } else {
+      motto.classList.remove("hidden");
+    }
+  }
+});
+
+//menuDiv.addEventListener("click", translateMenu);
 
 /***************************************/
 /*****     Sticky Navigation       *****/

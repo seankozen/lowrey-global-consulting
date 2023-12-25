@@ -195,8 +195,10 @@ header {
   color: #fff;
   font-family: var(--main-font);
   z-index: 200;
+  opacity: .99;
   justify-content: center;
   align-items: center;
+  transition: opacity 1s ease-in, visibility 0s ease-in 2ms;
   display: flex;
   position: absolute;
   top: 40%;
@@ -204,8 +206,15 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in, visibility 0s ease-in 2s;
+}
+
 .motto {
   text-align: center;
+  opacity: .99;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;

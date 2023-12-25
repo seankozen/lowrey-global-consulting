@@ -242,8 +242,17 @@ header {
   left: 50%;
   z-index: 200;
   transform: translate(-50%, -50%);
+  opacity: 0.99;
+  /*new experimental code*/
+  transition: opacity 1s ease-in, visibility 0ms ease-in 2ms;
 }
 
+/* new experimental code */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in, visibility 0ms ease-in 2s;
+}
 /*
 .motto-box {
   display: flex;
@@ -269,6 +278,7 @@ header {
   text-align: center;
   line-height: 1.2;
   font-weight: bold;
+  opacity: 0.99;
 }
 
 #photo-credit {
@@ -497,9 +507,9 @@ footer {
   background-color: var(--nav-font-color);
 }
 
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
+/* ============================================================= */
+/*                         Media Queries                         */
+/* ============================================================= */
 
 /* ============================================== */
 /* Media Query for low resolution  Tablets, Ipads */

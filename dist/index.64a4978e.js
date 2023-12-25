@@ -579,6 +579,7 @@ const menuDiv = document.querySelector(".sidebar");
 const checkBox = document.getElementById("menu-checkbox");
 const jumbotron = document.querySelector(".jumbotron");
 const header = document.querySelector(".header");
+const motto = document.querySelector(".motto-box");
 const allPageSections = document.querySelectorAll(".sections");
 /*****     For form validation     *****/ const nameValidation = document.getElementById("name_validation");
 const submitterName = document.getElementById("name");
@@ -586,10 +587,18 @@ const submitterEmail = document.getElementById("email");
 const emailValidation = document.getElementById("email_validation");
 const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
-/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ const translateMenu = ()=>{
-    checkBox.checked = false;
+/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ /** 
+const translateMenu = () => {
+  checkBox.checked = false;
 };
-menuDiv.addEventListener("click", translateMenu);
+*/ checkBox.addEventListener("change", ()=>{
+    let viewingScreen = screen.width;
+    if (viewingScreen < 481) {
+        if (checkBox.checked) motto.classList.add("hidden");
+        else motto.classList.remove("hidden");
+    }
+});
+//menuDiv.addEventListener("click", translateMenu);
 /***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const navHeight = header.getBoundingClientRect().height;
 const stickyNav = (entries)=>{
     const [entry] = entries;
