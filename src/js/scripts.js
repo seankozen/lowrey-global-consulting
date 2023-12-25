@@ -15,15 +15,8 @@ const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
 
 /***************************************/
-/*****   Hamburger display or hide *****/
+/*****    Motto display or hide    *****/
 /***************************************/
-
-/** 
-const translateMenu = () => {
-  checkBox.checked = false;
-};
-*/
-
 checkBox.addEventListener("change", () => {
   let viewingScreen = screen.width;
   if (viewingScreen < 481) {
@@ -34,8 +27,6 @@ checkBox.addEventListener("change", () => {
     }
   }
 });
-
-//menuDiv.addEventListener("click", translateMenu);
 
 /***************************************/
 /*****     Sticky Navigation       *****/

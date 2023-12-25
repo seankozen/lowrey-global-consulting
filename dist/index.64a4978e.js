@@ -587,18 +587,13 @@ const submitterEmail = document.getElementById("email");
 const emailValidation = document.getElementById("email_validation");
 const submitterMessage = document.getElementById("message");
 const messageValidation = document.getElementById("message_validation");
-/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ /** 
-const translateMenu = () => {
-  checkBox.checked = false;
-};
-*/ checkBox.addEventListener("change", ()=>{
+/***************************************/ /*****    Motto display or hide    *****/ /***************************************/ checkBox.addEventListener("change", ()=>{
     let viewingScreen = screen.width;
     if (viewingScreen < 481) {
         if (checkBox.checked) motto.classList.add("hidden");
         else motto.classList.remove("hidden");
     }
 });
-//menuDiv.addEventListener("click", translateMenu);
 /***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const navHeight = header.getBoundingClientRect().height;
 const stickyNav = (entries)=>{
     const [entry] = entries;

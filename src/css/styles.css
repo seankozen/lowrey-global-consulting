@@ -243,35 +243,14 @@ header {
   z-index: 200;
   transform: translate(-50%, -50%);
   opacity: 0.99;
-  /*new experimental code*/
   transition: opacity 1s ease-in, visibility 0ms ease-in 2ms;
 }
 
-/* new experimental code */
 .hidden {
   visibility: hidden;
   opacity: 0;
   transition: opacity 1s ease-in, visibility 0ms ease-in 2s;
 }
-/*
-.motto-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 86px;
-  height: 79px;
-  left: 152px;
-  top: 301px;
-  color: rgba(255, 255, 255, 1);
-  font-family: var(--main-font);
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  z-index: 200;
-  transform: translate(-50%, -50%);
-}
-
-*/
 
 .motto {
   font-size: 20px;
