@@ -280,6 +280,7 @@ h1 {
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
   transition: transform 1s, opacity 1s;
+  scroll-margin-top: 5rem;
 }
 
 .sections h2 {

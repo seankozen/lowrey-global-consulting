@@ -235,6 +235,7 @@ h1 {
 
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
+  scroll-margin-top: 5rem;
   transition: transform 1s, opacity 1s;
 }
 

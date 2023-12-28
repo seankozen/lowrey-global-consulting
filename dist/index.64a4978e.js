@@ -593,14 +593,14 @@ const messageValidation = document.getElementById("message_validation");
     if (viewingScreen < 481) motto.classList.remove("hidden");
 };
 menuDiv.addEventListener("click", translateMenu);
-/***************************************/ /*****    Motto display or hide    *****/ /***************************************/ checkBox.addEventListener("change", ()=>{
+/*********************************************************/ /*************    Motto display or hide    ***************/ /*********************************************************/ checkBox.addEventListener("change", ()=>{
     let viewingScreen = screen.width;
     if (viewingScreen < 481) {
         if (checkBox.checked) motto.classList.add("hidden");
         else motto.classList.remove("hidden");
     }
 });
-/***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const navHeight = header.getBoundingClientRect().height;
+/*********************************************************/ /**************     Sticky Navigation       **************/ /*********************************************************/ const navHeight = header.getBoundingClientRect().height;
 const stickyNav = (entries)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) header.classList.add("sticky");
@@ -612,7 +612,26 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`
 });
 headerObserver.observe(jumbotron);
-/***************************************/ /*****  Reveal Section on Scroll   *****/ /***************************************/ const revealSection = (entries, observer)=>{
+/*********************************************************/ /*************        Page Navigation        *************/ /*********************************************************/ /*
+const navLinksAll = document.querySelectorAll(".nav__links");
+console.log(navLinksAll);
+
+navLinksAll.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    if (e.target.classList.contains("nav__link")) {
+      const id = e.target.getAttribute("href");
+      console.log(id);
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  });
+});
+*/ /*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section-hidden");
@@ -626,7 +645,7 @@ allPageSections.forEach((section)=>{
     sectionObserver.observe(section);
     section.classList.add("section-hidden");
 });
-/***************************************/ /*****       Form Validation       *****/ /***************************************/ const checkName = (e)=>{
+/*********************************************************/ /***********         Form Validation         *************/ /*********************************************************/ const checkName = (e)=>{
     let submitterName = e.target.value;
     if (submitterName == null || submitterName.length < 4) nameValidation.innerText = "Please enter a valid name.";
     else nameValidation.innerText = "";

@@ -28,9 +28,9 @@ const translateMenu = () => {
 
 menuDiv.addEventListener("click", translateMenu);
 
-/***************************************/
-/*****    Motto display or hide    *****/
-/***************************************/
+/*********************************************************/
+/*************    Motto display or hide    ***************/
+/*********************************************************/
 checkBox.addEventListener("change", () => {
   let viewingScreen = screen.width;
   if (viewingScreen < 481) {
@@ -42,9 +42,9 @@ checkBox.addEventListener("change", () => {
   }
 });
 
-/***************************************/
-/*****     Sticky Navigation       *****/
-/***************************************/
+/*********************************************************/
+/**************     Sticky Navigation       **************/
+/*********************************************************/
 const navHeight = header.getBoundingClientRect().height;
 
 const stickyNav = (entries) => {
@@ -62,9 +62,32 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(jumbotron);
 
-/***************************************/
-/*****  Reveal Section on Scroll   *****/
-/***************************************/
+/*********************************************************/
+/*************        Page Navigation        *************/
+/*********************************************************/
+/*
+const navLinksAll = document.querySelectorAll(".nav__links");
+console.log(navLinksAll);
+
+navLinksAll.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    if (e.target.classList.contains("nav__link")) {
+      const id = e.target.getAttribute("href");
+      console.log(id);
+      document.querySelector(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  });
+});
+*/
+/*********************************************************/
+/*************    Reveal Section on Scroll   *************/
+/*********************************************************/
 
 const revealSection = (entries, observer) => {
   const [entry] = entries;
@@ -85,9 +108,9 @@ allPageSections.forEach((section) => {
   section.classList.add("section-hidden");
 });
 
-/***************************************/
-/*****       Form Validation       *****/
-/***************************************/
+/*********************************************************/
+/***********         Form Validation         *************/
+/*********************************************************/
 
 const checkName = (e) => {
   let submitterName = e.target.value;
