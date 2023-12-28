@@ -612,26 +612,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`
 });
 headerObserver.observe(jumbotron);
-/*********************************************************/ /*************        Page Navigation        *************/ /*********************************************************/ /*
-const navLinksAll = document.querySelectorAll(".nav__links");
-console.log(navLinksAll);
-
-navLinksAll.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log(e.target);
-    if (e.target.classList.contains("nav__link")) {
-      const id = e.target.getAttribute("href");
-      console.log(id);
-      document.querySelector(id).scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "start",
-      });
-    }
-  });
-});
-*/ /*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
+/*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section-hidden");

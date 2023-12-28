@@ -706,6 +706,10 @@ footer {
     align-items: center;
   }
 
+  .nav__links a:hover {
+    color: var(--hamburger-font-color);
+  }
+
   nav ul {
     display: flex;
     list-style-type: none;
