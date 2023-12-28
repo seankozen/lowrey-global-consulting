@@ -646,6 +646,10 @@ footer {
     font-weight: 900;
   }
 
+  .sections {
+    scroll-margin-top: 0;
+  }
+
   .main-divider {
     width: 70%;
   }
