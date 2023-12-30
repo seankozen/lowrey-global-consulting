@@ -156,14 +156,42 @@ body {
   translate: 100%;
 }
 
+/**********  Exp CSS  ************/
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav__links ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.language__link {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.language__link a {
+  width: 100%;
+  font-size: 30px;
+  color: var(--hamburger-font-color);
+}
+
+/*********************************/
+
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
-
+/*
 .sidebar ul li {
   width: 100%;
   text-align: center;
 }
+*/
 
 .sidebar li a {
   font-size: 30px;
@@ -210,11 +238,11 @@ header {
 /* ============================================= */
 /*        Jumbotron main image and title         */
 /* ============================================= */
-
+/*
 .jumbotron {
   padding-bottom: 2rem;
 }
-
+*/
 .hero-box {
   background: black;
   width: 100vw;
@@ -270,7 +298,6 @@ h1 {
   text-align: center;
   font-weight: bold;
   color: var(--main-title-color);
-  padding-bottom: 1rem;
 }
 
 /* ============================================= */
@@ -280,7 +307,8 @@ h1 {
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
   transition: transform 1s, opacity 1s;
-  scroll-margin-top: 5rem;
+  padding-top: 3rem;
+  scroll-margin-top: 8rem;
 }
 
 .sections h2 {
@@ -369,7 +397,7 @@ footer {
 /* ============================================= */
 
 #contact-form {
-  padding: 0rem 2rem 2rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
 }
 
 .form-description-container {
@@ -480,6 +508,8 @@ hr {
   color: black;
   height: 2px;
   background-color: black;
+  margin-top: 4rem;
+  border: none;
 }
 
 footer {
@@ -519,6 +549,15 @@ footer {
   .sidebar li a {
     font-size: 20px;
   }
+
+  /**********  Exp CSS  ************/
+
+  .language__link a {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /*********************************/
 
   .sidebar li {
     padding-bottom: 5rem;
@@ -567,6 +606,15 @@ footer {
   .sidebar li a {
     font-size: 20px;
   }
+
+  /**********  Exp CSS  ************/
+
+  .language__link a {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /*********************************/
 
   .sidebar li {
     padding-bottom: 5rem;
@@ -706,6 +754,11 @@ footer {
     align-items: center;
   }
 
+  .nav__links {
+    margin-top: 0;
+    flex-direction: row;
+  }
+
   .nav__links a:hover {
     color: var(--hamburger-font-color);
   }
@@ -763,7 +816,7 @@ footer {
   /*              Section Styling                  */
   /* ============================================= */
   .sections {
-    scroll-margin-top: 0;
+    scroll-margin-top: 6rem;
   }
 
   .main-divider {

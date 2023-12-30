@@ -22,7 +22,7 @@
       sizes="32x32"
     />
   </head>
-  <body>
+  <body id="home">
     <header class="header">
       <div class="logo-box">
         <img src="./src/img/company_logo.svg" width="80" height="60"></img>
@@ -31,23 +31,28 @@
         <label class="hamburger-menu">
           <input id="menu-checkbox" type="checkbox" />
         </label>
-        <ul class="sidebar nav__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#our-business">Our Business</a></li>
-          <li><a href="#our-services">Our Services</a></li>
-          <li><a href="#english-proofreading">Sign & Slogan Check</a></li>
-          <li><a href="#todd-lowrey">Todd Lowrey</a></li>
-          <li><a href="#contact-form">Contact Us</a></li>
-          <li><a lang="ja" href="index.jp.html">日本語へ</a></li>
-        </ul>
+        <div class="sidebar" >
+          <ul class="nav__links">
+            <li><a class="nav__link" href="#home">Home</a></li>
+            <li><a class="nav__link" href="#our-business">Our Business</a></li>
+            <li><a class="nav__link" href="#our-services">Our Services</a></li>
+            <li><a class="nav__link" href="#english-proofreading">Sign & Slogan Check</a></li>
+            <li><a class="nav__link" href="#todd-lowrey">Todd Lowrey</a></li>
+            <li><a class="nav__link" href="#contact-form">Contact Us</a></li> 
+          </ul>
+          <div class="language__link">
+            <a lang="ja" href="index.jp.html">日本語へ</a>
+          </div>
+        </div>
+        
       </div>
       <nav class="large-nav">
         <ul class="nav__links">
-          <li><a href="#our-business">Our Business</a></li>
-          <li><a href="#our-services">Our Services</a></li>
-          <li><a href="#english-proofreading">Sign & Slogan Check</a></li>
-          <li><a href="#todd-lowrey">Todd Lowrey</a></li>
-          <li><a href="#contact-form">Contact Us</a></li>
+          <li><a class="nav__link" href="#our-business">Our Business</a></li>
+          <li><a class="nav__link" href="#our-services">Our Services</a></li>
+          <li><a class="nav__link" href="#english-proofreading">Sign & Slogan Check</a></li>
+          <li><a class="nav__link" href="#todd-lowrey">Todd Lowrey</a></li>
+          <li><a class="nav__link" href="#contact-form">Contact Us</a></li>
         </ul>
         <div class="language-selector">
           <a id="jpn-flag" href="index.jp.html">
@@ -208,7 +213,7 @@
             inquire about your language training needs. We will get back 
             to you within 1 business day. 
           </p>
-      </div>
+        </div>
         <div class="form-card">
           <form
             id="contact_form"

@@ -130,13 +130,32 @@ body {
   translate: 100%;
 }
 
-.hamburger-menu:has(input:checked) + .sidebar {
-  translate: 0;
+.nav__links {
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
 }
 
-.sidebar ul li {
+.nav__links ul li {
   text-align: center;
   width: 100%;
+}
+
+.language__link {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.language__link a {
+  color: var(--hamburger-font-color);
+  width: 100%;
+  font-size: 30px;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
 }
 
 .sidebar li a {
@@ -172,10 +191,6 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 5px;
-}
-
-.jumbotron {
-  padding-bottom: 2rem;
 }
 
 .hero-box {
@@ -229,13 +244,13 @@ h1 {
   font-family: var(--main-font);
   text-align: center;
   color: var(--main-title-color);
-  padding-bottom: 1rem;
   font-weight: bold;
 }
 
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
-  scroll-margin-top: 5rem;
+  padding-top: 3rem;
+  scroll-margin-top: 8rem;
   transition: transform 1s, opacity 1s;
 }
 
@@ -316,7 +331,7 @@ footer {
 }
 
 #contact-form {
-  padding: 0 2rem 2rem;
+  padding: 3rem 2rem 2rem;
 }
 
 .form-description-container {
@@ -409,8 +424,10 @@ input:focus, textarea:focus {
 hr {
   color: #000;
   background-color: #000;
+  border: none;
   width: 80%;
   height: 2px;
+  margin-top: 4rem;
 }
 
 footer {
@@ -438,6 +455,11 @@ footer {
 
   .sidebar li a {
     font-size: 20px;
+  }
+
+  .language__link a {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .sidebar li {
@@ -477,6 +499,11 @@ footer {
 
   .sidebar li a {
     font-size: 20px;
+  }
+
+  .language__link a {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .sidebar li {
@@ -593,6 +620,11 @@ footer {
     display: flex;
   }
 
+  .nav__links {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
   .nav__links a:hover {
     color: var(--hamburger-font-color);
   }
@@ -647,7 +679,7 @@ footer {
   }
 
   .sections {
-    scroll-margin-top: 0;
+    scroll-margin-top: 6rem;
   }
 
   .main-divider {

@@ -63,6 +63,31 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(jumbotron);
 
 /*********************************************************/
+/*************       Smooth scroll to      ***************/
+/*********************************************************/
+const navLinks = document.querySelectorAll(".nav__links");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (e.target.classList.contains("nav__link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+/*
+navLinks.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});*/
+/*********************************************************/
 /*************    Reveal Section on Scroll   *************/
 /*********************************************************/
 

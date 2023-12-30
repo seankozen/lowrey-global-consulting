@@ -612,7 +612,27 @@ const headerObserver = new IntersectionObserver(stickyNav, {
     rootMargin: `-${navHeight}px`
 });
 headerObserver.observe(jumbotron);
-/*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
+/*********************************************************/ /*************       Smooth scroll to      ***************/ /*********************************************************/ const navLinks = document.querySelectorAll(".nav__links");
+navLinks.forEach((link)=>{
+    link.addEventListener("click", (e)=>{
+        e.preventDefault();
+        if (e.target.classList.contains("nav__link")) {
+            const id = e.target.getAttribute("href");
+            document.querySelector(id).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+/*
+navLinks.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});*/ /*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section-hidden");
