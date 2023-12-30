@@ -156,7 +156,6 @@ body {
   translate: 100%;
 }
 
-/**********  Exp CSS  ************/
 .nav__links {
   display: flex;
   flex-direction: column;
@@ -181,17 +180,9 @@ body {
   color: var(--hamburger-font-color);
 }
 
-/*********************************/
-
 .hamburger-menu:has(input:checked) + .sidebar {
   translate: 0;
 }
-/*
-.sidebar ul li {
-  width: 100%;
-  text-align: center;
-}
-*/
 
 .sidebar li a {
   font-size: 30px;
@@ -238,11 +229,7 @@ header {
 /* ============================================= */
 /*        Jumbotron main image and title         */
 /* ============================================= */
-/*
-.jumbotron {
-  padding-bottom: 2rem;
-}
-*/
+
 .hero-box {
   background: black;
   width: 100vw;
@@ -550,14 +537,10 @@ footer {
     font-size: 20px;
   }
 
-  /**********  Exp CSS  ************/
-
   .language__link a {
     font-size: 20px;
     font-weight: 600;
   }
-
-  /*********************************/
 
   .sidebar li {
     padding-bottom: 5rem;

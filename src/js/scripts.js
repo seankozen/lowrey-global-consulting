@@ -78,15 +78,6 @@ navLinks.forEach((link) => {
   });
 });
 
-/*
-navLinks.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (e.target.classList.contains("nav__link")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});*/
 /*********************************************************/
 /*************    Reveal Section on Scroll   *************/
 /*********************************************************/

@@ -624,15 +624,7 @@ navLinks.forEach((link)=>{
         }
     });
 });
-/*
-navLinks.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (e.target.classList.contains("nav__link")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});*/ /*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
+/*********************************************************/ /*************    Reveal Section on Scroll   *************/ /*********************************************************/ const revealSection = (entries, observer)=>{
     const [entry] = entries;
     if (!entry.isIntersecting) return;
     entry.target.classList.remove("section-hidden");
