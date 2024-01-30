@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"ciGIJ":[function(require,module,exports) {
+})({"1mTpR":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "a4579e5764a4978e";
+module.bundle.HMR_BUNDLE_ID = "c80ec104bbfd53dd";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -574,67 +574,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"goJYj":[function(require,module,exports) {
-const menuDiv = document.querySelector(".sidebar");
-const checkBox = document.getElementById("menu-checkbox");
-const jumbotron = document.querySelector(".jumbotron");
-const header = document.querySelector(".header");
-const allPageSections = document.querySelectorAll(".sections");
-/*****     For form validation     *****/ const nameValidation = document.getElementById("name_validation");
-const submitterName = document.getElementById("name");
-const submitterEmail = document.getElementById("email");
-const emailValidation = document.getElementById("email_validation");
-const submitterMessage = document.getElementById("message");
-const messageValidation = document.getElementById("message_validation");
-/***************************************/ /*****   Hamburger display or hide *****/ /***************************************/ const translateMenu = ()=>{
-    checkBox.checked = false;
-};
-menuDiv.addEventListener("click", translateMenu);
-/***************************************/ /*****     Sticky Navigation       *****/ /***************************************/ const navHeight = header.getBoundingClientRect().height;
-const stickyNav = (entries)=>{
-    const [entry] = entries;
-    if (!entry.isIntersecting) header.classList.add("sticky");
-    else header.classList.remove("sticky");
-};
-const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0.3,
-    rootMargin: `-${navHeight}px`
-});
-headerObserver.observe(jumbotron);
-/***************************************/ /*****  Reveal Section on Scroll   *****/ /***************************************/ const revealSection = (entries, observer)=>{
-    const [entry] = entries;
-    if (!entry.isIntersecting) return;
-    entry.target.classList.remove("section-hidden");
-    observer.unobserve(entry.target);
-};
-const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.1
-});
-allPageSections.forEach((section)=>{
-    sectionObserver.observe(section);
-    section.classList.add("section-hidden");
-});
-/***************************************/ /*****       Form Validation       *****/ /***************************************/ const checkName = (e)=>{
-    let submitterName = e.target.value;
-    if (submitterName == null || submitterName.length < 4) nameValidation.innerText = "Please enter a valid name.";
-    else nameValidation.innerText = "";
-};
-const checkEmail = (e)=>{
-    let submitterEmail = e.target.value;
-    if (!submitterEmail.includes("@") || !submitterEmail.includes(".")) emailValidation.innerText = "Please enter a valid email.";
-    else emailValidation.innerText = "";
-};
-const checkMessage = (e)=>{
-    let submitterMessage = e.target.value;
-    if (submitterMessage == null || submitterMessage.length < 5) messageValidation.innerText = "Please enter a message.";
-    else messageValidation.innerText = "";
-};
-submitterName.addEventListener("input", checkName);
-submitterEmail.addEventListener("input", checkEmail);
-submitterMessage.addEventListener("input", checkMessage);
+},{}],"30nLO":[function(require,module,exports) {
 
-},{}]},["ciGIJ","goJYj"], "goJYj", "parcelRequire1f89")
+},{}]},["1mTpR","30nLO"], "30nLO", "parcelRequire1f89")
 
-//# sourceMappingURL=index.64a4978e.js.map
+//# sourceMappingURL=index.blog.bbfd53dd.js.map
