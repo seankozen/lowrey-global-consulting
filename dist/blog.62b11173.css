@@ -1,3 +1,10 @@
+@font-face {
+  font-family: Aileron-SemiBold;
+  src: url("Aileron-SemiBold.ttf.da124a74.woff") format("woff"), url("Aileron-SemiBold.ttf.01651233.svg#Aileron-SemiBold") format("svg"), url("Aileron-SemiBold.ttf.a8555eca.eot"), url("Aileron-SemiBold.ttf.a8555eca.eot#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --hamburger-menu-background: #6ea3de;
   --animation-timing: .2s ease-in-out;
@@ -62,6 +69,20 @@ button {
   margin: 1rem 0;
   padding: .5rem;
   font-weight: bold;
+}
+
+.tumblr_title {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.tumblr_posts {
+  font-family: var(--main-font);
+}
+
+.tumblr_body p {
+  letter-spacing: .05rem;
+  font-weight: 500;
 }
 
 @media (width >= 481px) and (width <= 767px) {

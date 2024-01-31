@@ -1,4 +1,17 @@
 /* ============================================= */
+/*                    Fonts                      */
+/* ============================================= */
+@font-face {
+  font-family: "Aileron-SemiBold";
+  src: url("fonts/Aileron-SemiBold.ttf.woff") format("woff"),
+    url("fonts/Aileron-SemiBold.ttf.svg#Aileron-SemiBold") format("svg"),
+    url("fonts/Aileron-SemiBold.ttf.eot"),
+    url("fonts/Aileron-SemiBold.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================================= */
 /*                Blog Section                   */
 /* ============================================= */
 :root {
@@ -69,6 +82,20 @@ button {
   border: none;
   border-radius: 5px;
   margin: 1rem 0rem;
+}
+
+.tumblr_title {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.tumblr_posts {
+  font-family: var(--main-font);
+}
+
+.tumblr_body p {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
 }
 
 /* ============================================= */
