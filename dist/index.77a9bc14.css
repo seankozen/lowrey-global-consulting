@@ -146,6 +146,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
 }
 
 .language__link a {
@@ -462,6 +463,10 @@ footer {
     font-weight: 600;
   }
 
+  .language__link {
+    padding-bottom: 4rem;
+  }
+
   .sidebar li {
     padding-bottom: 5rem;
   }
@@ -508,6 +513,10 @@ footer {
 
   .sidebar li {
     padding-bottom: 5rem;
+  }
+
+  .language__link {
+    padding-bottom: 4rem;
   }
 
   .motto-box {
@@ -647,6 +656,15 @@ footer {
     font-size: 15px;
   }
 
+  .blog__box a {
+    font-size: 15px;
+  }
+
+  .blog__box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .language-selector {
     flex-direction: row;
     margin-left: auto;
@@ -743,6 +761,17 @@ footer {
   nav li {
     margin: 0 3rem;
     font-size: 18px;
+  }
+
+  .blog__box a {
+    font-size: 18px;
+  }
+
+  .blog__box {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 5rem;
+    margin-right: 4rem;
   }
 
   .form-description-container {
