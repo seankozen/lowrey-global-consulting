@@ -72,6 +72,10 @@ a:hover {
   font-weight: bolder;
 }
 
+.tumblr_posts {
+  font-family: var(--main-font);
+}
+
 @media (width >= 481px) and (width <= 767px) {
   body {
     max-width: 70%;
