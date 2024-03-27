@@ -30,6 +30,52 @@
 
 body {
   background-color: rgba(232, 242, 252, 1);
+  font-family: var(--main-font);
+}
+
+.button__box {
+  width: 100%;
+}
+
+.embed_iframe {
+  max-width: 95%;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  background-color: var(--nav-font-color);
+  color: var(--background);
+  padding: 0.5rem 0.5rem;
+  font-family: var(--main-font);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: block;
+}
+
+ol {
+  list-style: none;
+  padding-inline-start: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+a:hover {
+  cursor: pointer;
+  color: red;
+}
+
+/*
+body {
+  background-color: rgba(232, 242, 252, 1);
 }
 
 .return__website {
@@ -38,7 +84,7 @@ body {
 }
 
 button {
-  width: 70%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -49,7 +95,9 @@ a:hover {
 }
 
 body {
-  max-width: 90%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -91,12 +139,14 @@ button {
 
 .tumblr_posts {
   font-family: var(--main-font);
+  padding-left: 0;
 }
 
 .tumblr_body p {
   font-weight: 500;
   letter-spacing: 0.05rem;
 }
+*/
 
 /* ============================================= */
 /*              Media Queries                    */
@@ -109,6 +159,8 @@ button {
 @media (min-width: 481px) and (max-width: 767px) {
   body {
     max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -119,6 +171,8 @@ button {
 @media (min-width: 768px) {
   body {
     max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
