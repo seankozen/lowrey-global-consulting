@@ -59,6 +59,16 @@ a:hover {
   color: red;
 }
 
+.tumblr_body p {
+  letter-spacing: .05rem;
+  font-weight: 500;
+}
+
+.tumblr_title {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
 @media (width >= 481px) and (width <= 767px) {
   body {
     max-width: 70%;

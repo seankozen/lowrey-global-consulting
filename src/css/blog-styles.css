@@ -73,6 +73,16 @@ a:hover {
   color: red;
 }
 
+.tumblr_body p {
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.tumblr_title {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
 /*
 body {
   background-color: rgba(232, 242, 252, 1);
