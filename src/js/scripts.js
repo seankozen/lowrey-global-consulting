@@ -135,3 +135,10 @@ const checkMessage = (e) => {
 submitterName.addEventListener("input", checkName);
 submitterEmail.addEventListener("input", checkEmail);
 submitterMessage.addEventListener("input", checkMessage);
+
+/*********************************************************/
+/***********         Copyright Date          *************/
+/*********************************************************/
+const date = new Date().getFullYear();
+const cpyRightDateCurrent = document.getElementById("currentYear");
+cpyRightDateCurrent.innerText = date;
