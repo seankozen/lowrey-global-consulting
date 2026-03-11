@@ -3,7 +3,8 @@
 /* ============================================= */
 @font-face {
   font-family: "Aileron-SemiBold";
-  src: url("fonts/Aileron-SemiBold.ttf.woff") format("woff"),
+  src:
+    url("fonts/Aileron-SemiBold.ttf.woff") format("woff"),
     url("fonts/Aileron-SemiBold.ttf.svg#Aileron-SemiBold") format("svg"),
     url("fonts/Aileron-SemiBold.ttf.eot"),
     url("fonts/Aileron-SemiBold.ttf.eot?#iefix") format("embedded-opentype");
@@ -67,8 +68,11 @@ body {
   height: var(--bar-height);
   background-color: var(--foreground);
   transform-origin: left center;
-  transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing);
+  transition:
+    opacity var(--animation-timing),
+    width var(--animation-timing),
+    rotate var(--animation-timing),
+    translate var(--animation-timing);
 }
 
 .hamburger-menu {
@@ -259,13 +263,17 @@ header {
   z-index: 200;
   transform: translate(-50%, -50%);
   opacity: 0.99;
-  transition: opacity 1s ease-in, visibility 0ms ease-in 2ms;
+  transition:
+    opacity 1s ease-in,
+    visibility 0ms ease-in 2ms;
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1s ease-in, visibility 0ms ease-in 0.3s;
+  transition:
+    opacity 1s ease-in,
+    visibility 0ms ease-in 0.3s;
 }
 
 .motto {
@@ -294,7 +302,9 @@ h1 {
 
 .sections {
   margin: 30rem, 0rem, 20rem, 0rem;
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
   padding-top: 3rem;
   scroll-margin-top: 8rem;
 }
@@ -691,6 +701,14 @@ footer {
     padding-top: 3rem;
     z-index: -10;
   }
+
+  #todd-lowrey h2 {
+    justify-self: start;
+    text-align: left;
+    width: 100%;
+    padding-left: 2.5rem;
+  }
+
   .form-card {
     display: flex;
     justify-content: center;
